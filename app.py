@@ -196,7 +196,7 @@ def get_top_recommendations(courses, user_input):
     return response.text if response else "No recommendations found."
 
 # Streamlit UI
-st.title("Smart Coursera Course Recommender")
+st.title("SkillPick")
 
 user_input = st.text_area(
     "What would you like to learn?",
