@@ -12,6 +12,12 @@ import time
 os.environ["API_KEY"] = "AIzaSyAlzvE1sWUf_Ivlr3pfaEMW6wV_7PIRCVA"
 genai.configure(api_key=os.environ["API_KEY"])
 
+st.set_page_config(
+    page_icon="D:\shantanu\CourseraCourseRecommendor\learning.png",  # This can be an emoji
+    # OR a path to an image file
+    # page_icon="path/to/favicon.ico"
+)
+
 class Course:
     def __init__(self, title, rating, reviews, level, duration, link):
         self.title = title
@@ -197,6 +203,7 @@ def get_top_recommendations(courses, user_input):
 
 # Streamlit UI
 st.title("SkillPick")
+
 
 user_input = st.text_area(
     "What would you like to learn?",
